@@ -46,6 +46,16 @@ LIMIT 10;
 -- Q16
 
 -- Find the highest product price.
+SELECT product_id, price
+FROM order_items
+ORDER BY price DESC
+LIMIT 1;
+-- Its correct but a more easier and faster way will be
+SELECT MAX(price) AS highest_price
+FROM order_items;
+-- or without making a seperate coloumn
+SELECT MAX(price)
+FROM order_items;
 
 -- Q17
 
