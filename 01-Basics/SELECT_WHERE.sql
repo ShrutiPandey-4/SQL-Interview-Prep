@@ -51,15 +51,44 @@ FROM products;
 -- Q7
 
 -- Find sellers from SP.
+SELECT seller_id
+FROM sellers
+WHERE seller_state = 'SP';
 
 -- Q8
 
 -- Find products weighing more than 1 kg.
 
+SELECT product_id
+FROM products
+WHERE product_weight_g > 1000;
+
+-- product_weight_g is in grams, while the question asks for more than 1 kg.
+-- 1 kg = 1000 g
+
 -- Q9
 
 -- Find order items where price > 500.
+SELECT order_id
+FROM order_items
+WHERE order_price > 500;
+
+-- or
+
+SELECT order_id
+FROM order_items
+WHERE price > 500;
 
 -- Q10
 
 -- Find orders purchased after a particular date.
+
+SELECT order_id
+FROM orders
+WHERE order_purchase_timestamp > '2019-01-01';
+
+-- ✅ Concept:
+-- = → exactly this date
+-- > → after this date
+-- < → before this date
+-- >= → this date or after
