@@ -60,7 +60,24 @@ FROM order_items;
 -- Q17
 
 -- Find the highest freight value.
-
+SELECT MAX(freight_value)
+FROM order_items;
+-- or also with a new column
+SELECT MAX(freight_value) AS highest_freight
+FROM order_items;
 -- Q18
 
 -- Find the top 20 sellers based on item price.
+
+-- SELECT seller_id, price
+-- FROM order_items
+-- ORDER BY price DESC
+-- LIMIT 20;
+
+-- This gives the 20 most expensive individual order items, along with their sellers.
+
+SELECT seller_id, SUM(price) AS total_item_price
+FROM order_items
+GROUP BY seller_id
+ORDER BY total_item_price DESC
+LIMIT 20;
