@@ -119,3 +119,10 @@ GROUP BY p.product_category_name;
 --      │
 --      ↓
 -- SUM(price)
+
+-- CONCEPT:
+-- "per X" → GROUP BY X
+-- "total" → SUM()
+-- "average" → AVG()
+-- "number/count" → COUNT()
+-- "highest" → MAX()
