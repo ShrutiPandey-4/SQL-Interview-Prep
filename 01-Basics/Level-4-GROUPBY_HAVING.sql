@@ -6,6 +6,7 @@
 
 -- Find number of customers in each state.
 
+
 -- Q30
 
 -- Find number of orders for each status.
